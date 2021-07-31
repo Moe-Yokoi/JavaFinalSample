@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>book</title>
+</head>
+<body>
+
+<form action="/book/save" method="POST" th:object="${customer}">
+<label>Room Type</label>
+ <select  th:field="*{roomType}">
+ 
+  <option th:value="Type1">Type1</option>
+  <option th:value="Type2">Type2</option>
+  <option th:value="Type3">Type3</option>
+</select> 
+
+<input type="date" th:field="*{date}">
+
+  <input type="text" placeholder="First Name" th:field="*{firstName}">
+			  
+  <input class="form-control" type="text" placeholder="Last Name" th:field="*{lastName}" >
+			
+  <input class="form-control" type="text" placeholder="Email Address" th:field="*{email}" >
+			
+  <button type="submit" class="btn btn-primary">complete</button>
+</form>
+
+
+
+</body>
+</html>
